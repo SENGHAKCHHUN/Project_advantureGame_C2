@@ -1,7 +1,7 @@
 #============================ IMPORTS ============================
 import tkinter as tk
 from tkinter import *
-from PIL import ImageTk, Image
+# from PIL import ImageTk, Image
 
 #============================ CONSTANTS ============================
 
@@ -33,20 +33,69 @@ help_board = PhotoImage(file="Images/help.png")
 grass_img = PhotoImage(file="Images/grass.png",)
 stone_img = PhotoImage(file="Images/stone.png")
 coin_img = PhotoImage(file="Images/coin.png")
+door_img = PhotoImage(file="Images/door.png")
+key_img = PhotoImage(file="Images/key.png")
+flower_img = PhotoImage(file="Images/flower.png")
+money_img = PhotoImage(file="Images/money.png")
+thorn_img = PhotoImage(file="Images/thorn.png")
+dimond_img = PhotoImage(file="Images/dimond.png")
+monster_img = PhotoImage(file="Images/monster.png")
 #============================= BACKGROUND =====================
+
+
+
 
 #=========================== ALL LEVELS =======================
 
 def level1(event):
     canvas.delete("all")
+    # =============   GRASS IMAGES =========
     canvas.create_image(1, 0, image=summer_bg, anchor="nw")
-    canvas.create_image(150,200, image = grass_img, anchor="nw", tags = "platform")
-    canvas.create_image(300,250, image = stone_img, anchor="nw", tags = "platform")
-    canvas.create_image(450,450, image = grass_img, anchor="nw", tags = "platform")
-    canvas.create_image(650,500, image = stone_img, anchor="nw", tags = "platform")
-    canvas.create_image(150,550, image = grass_img, anchor="nw", tags = "platform")
-    canvas.create_image(150,550, image = grass_img, anchor="nw", tags = "platform")
-    canvas.create_image(150,550, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(320,150, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(450,250, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(170,300, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(700,350, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(1100,400, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(730,200, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(1000,270, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(150,470, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(350,600, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(500,500, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(1000,600, image = grass_img, anchor="nw", tags = "platform")
+    canvas.create_image(100,620, image = grass_img, anchor="nw", tags = "platform")
+    # ==================  DOOR AND KEY IMAGE ===============
+    canvas.create_image(380,100, image = door_img, anchor = "nw")
+    canvas.create_image(1120,250, image = key_img, anchor = "nw")
+    # ==================  STONE IMAGES ===============
+    canvas.create_image(650,600, image = stone_img, anchor="nw", tags = "platform")
+    canvas.create_image(450,400, image = stone_img, anchor="nw", tags = "platform")
+    canvas.create_image(800,550, image = stone_img, anchor="nw", tags = "platform")
+    canvas.create_image(950,450, image = stone_img, anchor="nw", tags = "platform")
+    # ==================  FLOWERS ===============
+    canvas.create_image(950,200, image = flower_img, anchor = "nw")
+    canvas.create_image(900,520, image = flower_img, anchor = "nw")
+    canvas.create_image(100,390, image = flower_img, anchor = "nw")
+
+    # ==================  COINS, DIMOND, THORN, MONEY ===============
+
+    canvas.create_image(240,280, image = money_img, anchor = 'nw')
+    canvas.create_image(730,330, image = money_img, anchor = "nw")
+
+    canvas.create_image(470,350, image = dimond_img, anchor = 'nw')
+    canvas.create_image(820,500, image = dimond_img, anchor = 'nw')
+
+    canvas.create_image(410,600, image = coin_img, anchor = 'nw')
+    canvas.create_image(980,420, image = coin_img, anchor = 'nw')
+    canvas.create_image(1170,380, image = coin_img, anchor = 'nw')
+
+
+    canvas.create_image(270,450, image =monster_img, anchor = 'nw')
+    canvas.create_image(510,240, image =monster_img, anchor = 'nw')
+    canvas.create_image(800,340, image =monster_img, anchor = 'nw')
+
+    canvas.create_image(770,130, image =thorn_img, anchor = 'nw')
+    canvas.create_image(550,430, image =thorn_img, anchor = 'nw')
+    canvas.create_image(1060,530, image =thorn_img, anchor = 'nw')
 
     canvas.create_image(25, 10, image=back_img, anchor="nw", tags="back_all_levels")
 
