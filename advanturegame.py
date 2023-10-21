@@ -234,6 +234,8 @@ canvas.tag_bind("level3","<Button-1>",level3)
 #========================= REMOTES =================
 window.bind("<Key>", start_move)
 window.bind("<KeyRelease>", stop_move)
+window.bind("<KeyRelease>", stop_move)
+
 home()
 
 #========================= DISPLAY WINDOW =================
